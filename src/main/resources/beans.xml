@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean class="com.di.Product" id="prod">
+
+		<constructor-arg value="343" />
+		<constructor-arg value="Camera" />
+		<constructor-arg value="50000" />
+		<constructor-arg value="CG" />
+	</bean>
+	
+	<bean class="com.di.Bike" id="bik">
+	  
+	   <property name="color" value="Red"/>
+	   <property name="price" value="790000"/>
+	   <property name="company" value="Honda"/>
+	</bean>
+	
+	<bean class="com.di.Customer" id="cust">
+	     <property name="id" value="5454"/>
+	     <property name="name" value="Govinda KC"/>
+	     <property name="city" value="Dhangadhi"/>
+	     <property name="age" value="33"/>
+	     <property name="bike" ref="bik"/>
+	</bean>
+
+</beans>
